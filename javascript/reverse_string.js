@@ -1,13 +1,12 @@
 function reverseString(str) {
   // type your code here
   let reversedString = "";
-  let length = str.length;
 
-  for (let i = length; i >= 0; i--) {
-    reverseString = str[i];
-  };
+  for (let i = str.length - 1; i >= 0; i--) {
+    reversedString += str[i];
+  }
 
-  return reverseString;
+  return reversedString;
 }
 
 if (require.main === module) {
@@ -26,9 +25,7 @@ module.exports = reverseString;
 // Please add your pseudocode to this file
 // And a written explanation of your solution
 
-// 1. Create an empty string
-// 2. Get the length of the string
-// 3. Set i to one less than the length of the string in a for-loop
-// 4. Get the char at that index
-// 5. Concatenate the char to the string
-// 6. Decrement i by 1
+// 1. Create a string and set it as an empty string
+// 2. Find the length of the string passed in
+// 3. Loop through the string and concatenate each char to the new string, starting at the end (length - 1)
+// 4. Return the new string
